@@ -1,0 +1,95 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{import}
+\usepackage{xparse}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\import{./}{defs.tex}
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://www.sharadvikram.com/}{\Large Sharad Vikram}} & Email: \href{mailto:sharad.vikram@gmail.com}{\link{sharad.vikram@gmail.com}}\\
+  \href{http://www.sharadvikram.com/}{\link{www.sharadvikram.com}} & Github: \href{http://www.github.com/sharadmv}{\link{sharadmv}}\\
+      & Twitter: \href{https://twitter.com/sharadvikram}{\link{@sharadvikram}}\\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California San Diego}{San Diego, CA}
+      {Ph.D. in Computer Science (Machine Learning)}{Oct. 2014 -- May 2019 (expected)}
+    \resumeSubheading
+      {University of California Berkeley}{Berkeley, CA}
+      {B.S. in Electrical Engineering and Computer Science}{Aug. 2011 -- May. 2014}
+  \resumeSubHeadingListEnd
+
+\section{Publications}
+\resumeSubHeadingListStart
+\import{./}{pubs.tex}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+%\resumeSubHeadingListStart
+\import{./}{experience.tex}
+%\resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------------
+\section{Research}
+\resumeSubHeadingListStart
+\import{./}{research.tex}
+\resumeSubHeadingListEnd
+
+%-----------TEACHING-----------------
+\section{Teaching}
+\resumeSubHeadingListStart
+\import{./}{teaching.tex}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \projectsStart
+  \import{./}{projects.tex}
+  \projectsEnd
+  
+%-------------------------------------------
+\end{document}

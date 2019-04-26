@@ -1,0 +1,79 @@
+\usepackage{xcolor}
+\newcommand{\link}[1]{{\color{blue}#1}}
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\teachingHeading}[1]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\bullet$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label={},leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label={}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\NewDocumentCommand\publication{ommm}{
+ \IfNoValueTF{#1}
+     {\item #3. \emph{#2}. #4}
+     {\item #3. \emph{#2}. #4. \href{#1}{(\link{link})}}
+}
+
+\NewDocumentCommand\experience{mmmmm}{
+    \resumeSubheading
+      {#1}{#2}
+      {#3}{#4}
+    \vspace{0pt}
+    \begin{itemize}
+    \setlength\itemsep{-3pt}
+    #5
+    \end{itemize}
+}
+
+\NewDocumentCommand\research{mmmmm}{
+    \resumeSubheading
+      {#1}{#2}
+      {#3}{#4}
+    \vspace{5pt}
+    
+    #5
+}
+
+\NewDocumentCommand\teachingItem{mm}{
+    \vspace{-3pt}
+    \item[] #1
+    \vspace{-5pt}
+    \begin{itemize}
+    #2
+    \end{itemize}
+}
+
+\newcommand\projectsStart{
+    \begin{itemize}
+    \setlength\itemsep{-3pt}
+}
+\newcommand\projectsEnd{
+    \end{itemize}
+}
+\NewDocumentCommand\project{m}{
+    \item #1
+}
+\newcommand\me{Sharad Vikram}
