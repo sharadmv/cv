@@ -1,6 +1,6 @@
-name: Build CV
-  on: 
-    push: 
+name: CV
+  on:
+    push:
       branches: [ master ]
   jobs:
     build_latex:
