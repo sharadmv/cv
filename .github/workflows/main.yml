@@ -16,18 +16,9 @@ name: Build CV
             name: PDF
             path: resume.pdf
 
-name: Update website
-on:
-  push:
-    branches: [ master ]
-
-jobs:
-  dispatch:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: sharadmv/sharadvikram.com
-          event-type: update-cv
+        - name: Repository Dispatch
+          uses: peter-evans/repository-dispatch@v1
+          with:
+            token: ${{ secrets.REPO_ACCESS_TOKEN }}
+            repository: sharadmv/sharadvikram.com
+            event-type: update-cv
