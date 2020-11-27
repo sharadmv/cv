@@ -1,4 +1,4 @@
-Name: Update website
+name: Update website
 on:
   push:
     branches: [ master ]
