@@ -1,11 +1,33 @@
-\experience{Google}{San Francisco, CA}{Researcher}{2019 -- Present}{
-\item Added a JAX backend for TensorFlow Probability (TFP)
-\item Built out the SPMD distributed API for TFP, used to scale Bayesian inference to hundreds to thousands of accelerators
-\item Lead for Oryx, a probabilistic programming language built on JAX
-\item Methodological research in approximate Bayesian inference
+\experience{Google Research}{San Francisco, CA}{Researcher}{2019 -- Present}{
+\item (2022 -- Present) JAX Team
+\begin{itemize}
+    \item JAX core development 
+    \begin{itemize}
+        \item Full-stack JAX expert (large-scale ML, functional programming, program transformations, automatic differentiation, side-effects, interfacing with ML compilers and runtimes on CPU/GPU/TPU)
+        \item Designed and implemented JAX's new side-effect system, enabling a new generation of side-effect-aware JAX transformations (debugging side-effects, error handling, mutable state, PRNG key reuse)
+        \item Designed and implemented JAX \href{https://jax.readthedocs.io/en/latest/debugging/index.html}{\link{debugging features}} (debug printing, Python callbacks).
+        \item Across-the-board JAX contributions (sharding visualization, error effects, FFI, and more)
+    \end{itemize}
+    \item Creator and lead for \href{https://github.com/jax-ml/jax-triton}{\link{JAX-Triton and Pallas}}, Python front-ends for writing custom GPU kernels that integrate with JAX.
+\end{itemize}
+\item (2019 -- 2022) TensorFlow Probability Team
+\begin{itemize}
+    \item Probabilistic programming
+    \begin{itemize}
+        \item Creator and lead for \href{https://github.com/jax-ml/oryx}{\link{Oryx}}, a probabilistic programming language built on JAX based on functional program transformations. Oryx is used throughout Google for Bayesian modeling and state handling.
+        \item Designed and implemented \href{https://www.tensorflow.org/probability/examples/Distributed_Inference_with_JAX}{\link{abstractions for distributed Bayesian inference}}, used to scale MCMC and VI to hundreds or thousands of accelerators.
+        \item Added a \href{https://www.tensorflow.org/probability/examples/TensorFlow_Probability_on_JAX}{\link{JAX backend for TensorFlow Probability}}.
+    \end{itemize}
+    \item Methodological research
+    \begin{itemize}
+        \item ``What are Bayesian Neural Network Posteriors Really Like?'' -- ICML 2021
+        \item ``Automatic structured variational inference.'' -- AISTATS 2021
+        \item ``Differentiation Variational Inference with Mixtures'' -- AISTATS 2021
+    \end{itemize}
+\end{itemize}
 }
 
-\experience{Google}{San Francisco, CA}{Machine Learning Research Intern}{Summer 2018}{
+\experience{Google Research}{San Francisco, CA}{Machine Learning Research Intern}{Summer 2018}{
 \item Worked on incorporating Bayesian nonparametric tree priors with VAEs. Paper accepted into AISTATS 2019 (\href{https://arxiv.org/abs/1810.06891}{\link{link}}). Mentored by Matthew Hoffman and Matthew Johnson
 }
 
@@ -28,6 +50,7 @@
 \item Worked on various logging services on Facebook Chat backend 
 }
 
+\begin{comment}
 \experience{RewardMe}{Mountain View, CA}{Software Engineering Intern}{Summer 2012}{
 \item Worked on Android Bluetooth Serial communication with an Android app
 \item Worked with Google Maps API to create a realtime monitoring tool
@@ -46,4 +69,5 @@
 design a search interface that would query a large neuroscience database; interface was
 unique in that it would back-check queries for contextual errors
 }
+\end{comment}
 
